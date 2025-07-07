@@ -241,4 +241,85 @@ body {
     font-weight: 900;
     font-size: 2.5rem;
     letter-spacing: -0.01em;
+}
+
+/* Light theme (Starship-inspired) */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #232946;
+  }
+  .main-title {
+    background: linear-gradient(90deg, #a259ff 0%, #ff2d7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 2px 16px rgba(162, 89, 255, 0.10);
+  }
+  .starship-subtitle {
+    color: #a259ff;
+  }
+  .category-header {
+    color: #6b7280;
+  }
+  .shortcut-key {
+    background: #e0e7ff;
+    color: #232946;
+    border: 1.5px solid rgba(162, 89, 255, 0.18);
+  }
+  .subtitle {
+    color: #64748b;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 32px 0 rgba(162, 89, 255, 0.10), 0 1.5px 8px 0 rgba(255, 45, 122, 0.08);
+    border: 1.5px solid rgba(162, 89, 255, 0.10);
+  }
+  #print-button {
+    background: linear-gradient(90deg, #a259ff 0%, #ff2d7a 100%);
+    color: #fff;
+  }
+  #print-button:hover, #print-button:focus {
+    background: linear-gradient(90deg, #ff2d7a 0%, #a259ff 100%);
+  }
+  #search-input {
+    background: rgba(224, 231, 255, 0.7);
+    border: 1.5px solid rgba(162, 89, 255, 0.13);
+    color: #232946;
+  }
+  #search-input:focus {
+    border-color: #a259ff;
+    box-shadow: 0 2px 16px 0 rgba(162, 89, 255, 0.14);
+  }
+  #shortcuts-table td {
+    color: #232946;
+  }
+  #shortcuts-table td.description-cell {
+    color: #6b7280;
+  }
+  #shortcuts-table td.shortcut-cell {
+    color: #232946;
+  }
+  .category-cell {
+    color: #a259ff;
+    border-right: 1.5px solid rgba(162, 89, 255, 0.10);
+  }
+  .key-separator {
+    color: #a259ff;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(224, 231, 255, 0.18);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(162, 89, 255, 0.18);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 45, 122, 0.25);
+  }
+  .icon-file { color: #4ae0fc; }
+  .icon-command { color: #ff2d7a; }
+  .icon-edit { color: #f9d923; }
+  .icon-window { color: #f25f5c; }
+  .icon-clojure { color: #43d9ad; }
 } 
