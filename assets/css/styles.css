@@ -1,0 +1,299 @@
+/* Custom font and smooth scrolling */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;900&family=Montserrat:wght@300;900&family=Poppins:wght@300;900&display=swap');
+
+html {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #18181b 0%, #232946 100%);
+    color: #e5e7eb;
+}
+.main-title {
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, #ff2d7a 0%, #a259ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 2px 16px rgba(166, 51, 255, 0.10);
+    margin-bottom: 0.5rem;
+}
+.starship-subtitle {
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    letter-spacing: 0.32em;
+    color: #a259ff;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    white-space: nowrap;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #b0b0b8;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+    text-shadow: none;
+    text-transform: none;
+    padding: 0;
+}
+.shortcut-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.7rem;
+    height: 1.7rem;
+    padding: 0 0.5rem;
+    background: #232946;
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    color: #e0e0e6;
+    border: 1.5px solid rgba(229,231,235,0.12);
+    box-shadow: none;
+    transition: background 0.18s, color 0.18s;
+}
+.subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #bdbdbd;
+    margin-bottom: 1.5rem;
+}
+
+/* Main card (glassmorphic) */
+.glass-card {
+    background: rgba(24, 24, 27, 0.92);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(166, 51, 255, 0.10), 0 1.5px 8px 0 rgba(255, 39, 126, 0.08);
+    border: 1.5px solid rgba(166, 51, 255, 0.10);
+    backdrop-filter: blur(18px) saturate(1.3);
+    -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    overflow: hidden;
+}
+
+/* Search input */
+#search-input {
+    background: rgba(35, 41, 70, 0.7);
+    border: 1.5px solid rgba(166, 51, 255, 0.13);
+    border-radius: 1.5rem;
+    color: #e5e7eb;
+    font-size: 1.1rem;
+    padding: 0.85rem 1.25rem 0.85rem 2.5rem;
+    box-shadow: 0 1px 8px 0 rgba(166,51,255,0.06);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+#search-input:focus {
+    border-color: #a633ff;
+    box-shadow: 0 2px 16px 0 rgba(166,51,255,0.14);
+}
+
+/* Table */
+#shortcuts-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    background: transparent;
+}
+#shortcuts-table th, #shortcuts-table td {
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 1.15rem 1.5rem 1.15rem 0.75rem;
+    font-size: 0.98rem;
+}
+#shortcuts-table td {
+    color: #e5e7eb;
+    background: transparent;
+}
+#shortcuts-table td.description-cell {
+    color: #a3a3a9;
+    background: transparent;
+}
+#shortcuts-table td.shortcut-cell {
+    color: #e5e7eb;
+    background: transparent;
+}
+.table-row {
+    border-radius: 1.25rem;
+    transition: background 0.18s, box-shadow 0.18s;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0.5rem;
+}
+.category-cell {
+    font-weight: 700;
+    color: #a633ff;
+    vertical-align: top;
+    min-width: 220px;
+    border-right: 1.5px solid rgba(166, 51, 255, 0.10);
+    background: transparent;
+    font-size: 0.98rem;
+}
+.shortcut-cell {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    background: transparent;
+    text-align: left;
+    width: 1%;
+    white-space: nowrap;
+}
+.shortcut-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.25em;
+    white-space: nowrap;
+}
+.key-separator {
+    color: #c084fc;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0 0.05em;
+    vertical-align: middle;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(35, 41, 70, 0.18);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(166, 51, 255, 0.18);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 39, 126, 0.25);
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .glass-card {
+        background: white !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .shortcut-key {
+        background: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+        color: #334155 !important;
+    }
+    .table-row {
+        background: none !important;
+    }
+    .category-cell, .shortcut-cell, .description-cell {
+        color: #334155 !important;
+    }
+}
+
+/* Icon colors for different categories */
+.icon-file { color: #4ae0fc; }
+.icon-command { color: #ff277e; }
+.icon-edit { color: #f9d923; }
+.icon-window { color: #f25f5c; }
+.icon-clojure { color: #43d9ad; }
+
+.shortcut-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: -0.01em;
+}
+
+/* Light theme (Starship-inspired) */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #232946;
+  }
+  .main-title {
+    background: linear-gradient(90deg, #a259ff 0%, #ff2d7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 2px 16px rgba(162, 89, 255, 0.10);
+  }
+  .starship-subtitle {
+    color: #a259ff;
+  }
+  .category-header {
+    color: #6b7280;
+  }
+  .shortcut-key {
+    background: #e0e7ff;
+    color: #232946;
+    border: 1.5px solid rgba(162, 89, 255, 0.18);
+  }
+  .subtitle {
+    color: #64748b;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 32px 0 rgba(162, 89, 255, 0.10), 0 1.5px 8px 0 rgba(255, 45, 122, 0.08);
+    border: 1.5px solid rgba(162, 89, 255, 0.10);
+  }
+  #search-input {
+    background: rgba(224, 231, 255, 0.7);
+    border: 1.5px solid rgba(162, 89, 255, 0.13);
+    color: #232946;
+  }
+  #search-input:focus {
+    border-color: #a259ff;
+    box-shadow: 0 2px 16px 0 rgba(162, 89, 255, 0.14);
+  }
+  #shortcuts-table td {
+    color: #232946;
+  }
+  #shortcuts-table td.description-cell {
+    color: #6b7280;
+  }
+  #shortcuts-table td.shortcut-cell {
+    color: #232946;
+  }
+  .category-cell {
+    color: #a259ff;
+    border-right: 1.5px solid rgba(162, 89, 255, 0.10);
+  }
+  .key-separator {
+    color: #a259ff;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(224, 231, 255, 0.18);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(162, 89, 255, 0.18);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 45, 122, 0.25);
+  }
+  .icon-file { color: #4ae0fc; }
+  .icon-command { color: #ff2d7a; }
+  .icon-edit { color: #f9d923; }
+  .icon-window { color: #f25f5c; }
+  .icon-clojure { color: #43d9ad; }
+} 

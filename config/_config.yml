@@ -1,0 +1,22 @@
+title: Cursor & Calva Shortcuts
+description: A clean, organized shortcut reference sheet for Cursor and Calva
+author: Cássio Moreira
+url: "https://slmcassio.github.io/cursor-config"
+baseurl: ""
+
+# SEO
+lang: en_US
+locale: en_US
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - README.md
+  - _config.yml
+  - .DS_Store 

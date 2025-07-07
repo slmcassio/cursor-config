@@ -1,0 +1,112 @@
+{
+  // ========================================
+  // Editor Configuration
+  // ========================================
+  "editor.experimentalWhitespaceRendering": "font",
+  "editor.fontFamily": "'JetBrains Mono'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.minimap.sectionHeaderLetterSpacing": 2,
+  "debug.console.fontSize": 13,
+  "markdown.preview.fontSize": 13,
+  "notebook.markup.fontFamily": "'JetBrains Mono'",
+
+  // ========================================
+  // Files Configuration
+  // ========================================
+  "files.associations": {
+    "*.base": "json"
+  },
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+
+  // ========================================
+  // Workbench/UI Configuration
+  // ========================================
+  "window.autoDetectColorScheme": true,
+  "window.systemColorTheme": "auto",
+  "workbench.colorTheme": "Catppuccin Noctis Macchiato",
+  "workbench.editor.enablePreview": false,
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.preferredDarkColorTheme": "Catppuccin Noctis Macchiato",
+  "workbench.preferredLightColorTheme": "Catppuccin Noctis Frappé",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Noctis Mocha",
+  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Noctis Latte",
+  "catppuccin-noctis-icons.hidesExplorerArrows": true,
+  "explorer.confirmDelete": false,
+  
+  // ========================================
+  // Terminal Configuration
+  // ========================================
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  },
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.tabs.enabled": false,
+
+  // ========================================
+  // Git Configuration
+  // ========================================
+  "git.autofetch": true,
+  
+  // ========================================
+  // Search Configuration
+  // ========================================
+  "search.exclude": {
+    ".lsp/.cache": true
+  },
+
+  // ========================================
+  // Project Manager Configuration
+  // ========================================
+  "projectManager.git.baseFolders": [
+    "~/Developer",
+    "~/dev"
+  ],
+
+  // ========================================
+  // Calva/Clojure Configuration
+  // ========================================
+  "calva.autoConnectRepl": true,
+  "calva.autoOpenInspector": false,
+  "calva.autoOpenResultOutputDestination": false,
+  "calva.fmt.configPath": "CLOJURE-LSP",
+  "calva.fmt.newIndentEngine": true,
+  "calva.outputDestinations": {
+    "evalResults": "terminal",
+    "evalOutput": "terminal",
+    "otherOutput": "terminal"
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "calva.customREPLCommandSnippets": [
+    {
+      "name": "Refresh REPL",
+      "repl": "clj",
+      "key": "x",
+      "snippet": "(clojure.tools.namespace.repl/refresh)"
+    },
+    {
+      "name": "Refresh-all REPL",
+      "repl": "clj",
+      "key": "x+",
+      "snippet": "(clojure.tools.namespace.repl/refresh-all)"
+    },
+    {
+      "name": "Unalias all NS",
+      "repl": "clj",
+      "key": "ns-",
+      "snippet": "(map (partial ns-unalias *ns*) (keys (ns-aliases *ns*)))"
+    },
+    {
+      "name": "Run tests on namespace",
+      "key": "t",
+      "snippet": "(clojure.test/run-tests '$ns)"
+    },
+    {
+      "name": "Run single test",
+      "key": "t-",
+      "snippet": "(clojure.test/run-test-var #'$top-level-defined-symbol)"
+    }
+  ]
+}
