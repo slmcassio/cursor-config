@@ -1,0 +1,22 @@
+title: Cursor & Calva Shortcuts
+description: A clean, organized shortcut reference sheet for Cursor and Calva
+author: Your Name
+url: "https://yourusername.github.io/your-repo-name"
+baseurl: ""
+
+# SEO
+lang: en_US
+locale: en_US
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - README.md
+  - _config.yml
+  - .DS_Store 
