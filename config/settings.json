@@ -1,0 +1,41 @@
+{
+    "window.commandCenter": true,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "'JetBrains Mono'",
+    "notebook.markup.fontFamily": "'JetBrains Mono'",
+    "debug.console.fontSize": 13,
+    "terminal.integrated.fontSize": 13,
+    "markdown.preview.fontSize": 13,
+    "editor.fontLigatures": true,
+    "projectManager.git.baseFolders": [
+        "~/Developer"
+    ],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#3d393900",
+        "statusBar.foreground": "#c3c3c3"
+    },
+    "workbench.fontAliasing": "antialiased",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.preferredHighContrastColorTheme": "Cursor Dark High Contrast",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "calva.statusColor": {
+        "light": {
+            "disconnectedColor": "#777777",
+            "launchingColor": "#000000",
+            "connectedStatusColor": "#DB9550",
+            "typeStatusColor": "#91dc47"
+        },
+        "dark": {
+            "disconnectedColor": "#aaaaaa",
+            "launchingColor": "#ffffff",
+            "connectedStatusColor": "#DB9550",
+            "typeStatusColor": "#91dc47"
+        }
+    },
+    "workbench.editor.enablePreview": false,
+    "files.autoSave": "afterDelay",
+    "calva.autoOpenInspector": false,
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "window.autoDetectColorScheme": true
+}
