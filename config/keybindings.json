@@ -1,8 +1,79 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
+        "key": "alt+cmd+g",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-projectManager.listProjects"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-paredit.dragSexprForward",
+        "when": "calva:keybindingsEnabled && config.calva.paredit.hijackVSCodeDefaults && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-calva.evaluateCurrentTopLevelForm",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
+    },
+    {
+        "key": "alt+l",
+        "command": "-editor.action.inlineDiffs.nextDiffFile",
+        "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-paredit.dragSexprBackward",
+        "when": "calva:keybindingsEnabled && config.calva.paredit.hijackVSCodeDefaults && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+z",
+        "command": "-workbench.action.terminal.sizeToContentWidth",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.actions.view.problems",
+        "when": "workbench.panel.markers.view.active"
+    },
+    {
+        "key": "cmd+0",
+        "command": "calva.showOutputTerminal",
+        "when": "calva:keybindingsEnabled"
+    },
+    {
+        "key": "cmd+9",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "cmd+9",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     },
     {
         "key": "cmd+2",
@@ -10,8 +81,7 @@
     },
     {
         "key": "cmd+3",
-        "command": "-workbench.view.search",
-        "when": "workbench.view.search.active && !searchViewletVisible"
+        "command": "-workbench.action.focusThirdEditorGroup"
     },
     {
         "key": "cmd+3",
@@ -20,7 +90,8 @@
     },
     {
         "key": "cmd+3",
-        "command": "-workbench.action.focusThirdEditorGroup"
+        "command": "-workbench.view.search",
+        "when": "workbench.view.search.active && !searchViewletVisible"
     },
     {
         "key": "cmd+4",
@@ -28,8 +99,7 @@
     },
     {
         "key": "cmd+5",
-        "command": "-workbench.view.debug",
-        "when": "viewContainer.workbench.view.debug.enabled && activeViewlet != 'workbench.view.debug'"
+        "command": "-workbench.action.focusFifthEditorGroup"
     },
     {
         "key": "cmd+5",
@@ -38,7 +108,8 @@
     },
     {
         "key": "cmd+5",
-        "command": "-workbench.action.focusFifthEditorGroup"
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled && activeViewlet != 'workbench.view.debug'"
     },
     {
         "key": "cmd+6",
@@ -62,58 +133,64 @@
     },
     {
         "key": "cmd+9",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active && activeViewlet != 'workbench.view.scm'"
-    },
-    {
-        "key": "cmd+9",
         "command": "-workbench.action.toggleSidebarVisibility",
         "when": "activeViewlet == 'workbench.view.scm'"
     },
     {
-        "key": "cmd+0",
-        "command": "-workbench.action.focusSideBar"
+        "key": "cmd+9",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active && activeViewlet != 'workbench.view.scm'"
     },
     {
-        "key": "cmd+0",
-        "command": "-workbench.actions.view.problems",
-        "when": "workbench.panel.markers.view.active"
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
     },
     {
-        "key": "ctrl+escape",
-        "command": "projectManager.listProjects"
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
     },
     {
-        "key": "alt+cmd+p",
-        "command": "-projectManager.listProjects"
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.splitActiveTab",
+        "when": "terminalProcessSupported && terminalTabsFocus"
     },
     {
-        "key": "alt+cmd+g",
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+g",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
+        "key": "cmd+e",
+        "command": "-workbench.action.quickOpen",
+        "when": "!inQuickOpen"
     },
     {
-        "key": "ctrl+l",
-        "command": "workbench.action.gotoLine"
+        "key": "cmd+i",
+        "command": "composerMode.agent"
     },
     {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
+        "key": "cmd+r cmd+w",
+        "command": "-workbench.action.closeAllEditors"
     },
     {
-        "key": "alt+l",
-        "command": "-editor.action.inlineDiffs.nextDiffFile",
-        "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
+        "key": "cmd+r down",
+        "command": "-workbench.action.moveActiveEditorGroupDown"
     },
     {
-        "key": "ctrl+l",
-        "command": "-notebook.centerActiveCell",
-        "when": "notebookEditorFocused"
+        "key": "cmd+r left",
+        "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "cmd+r right",
+        "command": "-workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "cmd+r up",
+        "command": "-workbench.action.moveActiveEditorGroupUp"
+    },
+    {
+        "key": "cmd+r w",
+        "command": "-workbench.action.closeEditorsInGroup"
     },
     {
         "key": "cmd+w",
@@ -124,116 +201,54 @@
         "command": "workbench.action.closeAllEditors"
     },
     {
-        "key": "cmd+r cmd+w",
-        "command": "-workbench.action.closeAllEditors"
-    },
-    {
-        "key": "cmd+w w",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "cmd+w down",
+        "command": "workbench.action.moveEditorToBelowGroup"
     },
     {
         "key": "cmd+w g",
         "command": "workbench.action.closeEditorsInGroup"
     },
     {
-        "key": "cmd+r w",
-        "command": "-workbench.action.closeEditorsInGroup"
-    },
-    {
-        "key": "cmd+w r",
-        "command": "workbench.action.reopenClosedEditor"
-    },
-    {
-        "key": "shift+cmd+t",
-        "command": "-workbench.action.reopenClosedEditor"
-    },
-    {
-        "key": "cmd+r right",
-        "command": "-workbench.action.moveActiveEditorGroupRight"
-    },
-    {
-        "key": "cmd+r left",
-        "command": "-workbench.action.moveActiveEditorGroupLeft"
-    },
-    {
-        "key": "cmd+r down",
-        "command": "-workbench.action.moveActiveEditorGroupDown"
-    },
-    {
-        "key": "cmd+r up",
-        "command": "-workbench.action.moveActiveEditorGroupUp"
-    },
-    {
-        "key": "cmd+w right",
-        "command": "workbench.action.moveEditorToRightGroup"
-    },
-    {
         "key": "cmd+w left",
         "command": "workbench.action.moveEditorToLeftGroup"
-    },
-    {
-        "key": "cmd+w up",
-        "command": "workbench.action.moveEditorToAboveGroup"
-    },
-    {
-        "key": "cmd+w down",
-        "command": "workbench.action.moveEditorToBelowGroup"
     },
     {
         "key": "cmd+w n",
         "command": "workbench.action.navigateEditorGroups"
     },
     {
-        "key": "cmd+e",
-        "command": "-workbench.action.quickOpen",
-        "when": "!inQuickOpen"
+        "key": "cmd+w o",
+        "command": "workbench.action.closeOtherEditors"
     },
     {
-        "key": "shift+cmd+x",
-        "command": "-workbench.view.extensions",
-        "when": "viewContainer.workbench.view.extensions.enabled"
+        "key": "cmd+w r",
+        "command": "workbench.action.reopenClosedEditor"
     },
     {
-        "key": "f1",
-        "command": "-workbench.action.showCommands"
+        "key": "cmd+w right",
+        "command": "workbench.action.moveEditorToRightGroup"
     },
     {
-        "key": "shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "cmd+w up",
+        "command": "workbench.action.moveEditorToAboveGroup"
     },
     {
-        "key": "alt+up",
-        "command": "-paredit.dragSexprBackward",
-        "when": "calva:keybindingsEnabled && config.calva.paredit.hijackVSCodeDefaults && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+        "key": "cmd+w w",
+        "command": "workbench.action.closeActiveEditor"
     },
     {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     },
     {
-        "key": "alt+z",
-        "command": "-workbench.action.terminal.sizeToContentWidth",
-        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
+        "key": "ctrl+alt+,",
+        "command": "paredit.slurpSexpForward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
     },
     {
-        "key": "alt+z",
-        "command": "-editor.action.toggleWordWrap"
-    },
-    {
-        "key": "ctrl+alt+cmd+up",
-        "command": "-quickInput.previousSeparator",
-        "when": "inQuickInput && quickInputType == 'quickPick'"
-    },
-    {
-        "key": "ctrl+alt+c ctrl+s",
-        "command": "-calva.selectCurrentForm",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
-    },
-    {
-        "key": "ctrl+alt+w space",
-        "command": "-paredit.rangeForDefun",
+        "key": "ctrl+alt+.",
+        "command": "paredit.barfSexpForward",
         "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
     },
     {
@@ -242,88 +257,8 @@
         "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
     },
     {
-        "key": "ctrl+w",
-        "command": "-paredit.sexpRangeExpansion",
-        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+alt+.",
-        "command": "paredit.barfSexpForward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "-paredit.barfSexpForward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+alt+,",
-        "command": "paredit.slurpSexpForward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "-paredit.slurpSexpForward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+alt+,",
-        "command": "paredit.slurpSexpBackward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+alt+left",
-        "command": "-paredit.slurpSexpBackward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+alt+.",
-        "command": "paredit.barfSexpBackward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+alt+right",
-        "command": "-paredit.barfSexpBackward",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+alt+/",
-        "command": "paredit.sexpRangeContraction",
-        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "-paredit.sexpRangeContraction",
-        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
-    },
-    {
-        "key": "ctrl+alt+'",
-        "command": "calva.loadFile",
-        "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
-    },
-    {
-        "key": "ctrl+alt+c enter",
-        "command": "-calva.loadFile",
-        "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
-    },
-    {
-        "key": "ctrl+alt+enter",
-        "command": "calva.evaluateCurrentTopLevelForm",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
-    },
-    {
-        "key": "alt+enter",
-        "command": "-calva.evaluateCurrentTopLevelForm",
-        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
-    },
-    {
         "key": "ctrl+alt+;",
         "command": "calva.evaluateSelectionToSelectionEnd",
-        "when": "calva:keybindingsEnabled && editorHasSelection && editorTextFocus && editorLangId == 'clojure'"
-    },
-    {
-        "key": "ctrl+alt+enter",
-        "command": "-calva.evaluateSelectionToSelectionEnd",
         "when": "calva:keybindingsEnabled && editorHasSelection && editorTextFocus && editorLangId == 'clojure'"
     },
     {
@@ -332,30 +267,66 @@
         "when": "calva:keybindingsEnabled && editorTextFocus && !editorHasSelection && editorLangId == 'clojure'"
     },
     {
+        "key": "ctrl+alt+'",
+        "command": "calva.loadFile",
+        "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+alt+[",
+        "command": "calva.showReplOutputView",
+        "when": "calva:keybindingsEnabled"
+    },
+    {
+        "key": "ctrl+alt+\\",
+        "command": "calva.clojureLsp.manage"
+    },
+    {
+        "key": "ctrl+alt+]",
+        "command": "calva.showReplMenu"
+    },
+    {
+        "key": "ctrl+alt+c ctrl+alt+r",
+        "command": "-calva.showReplMenu"
+    },
+    {
+        "key": "ctrl+alt+c ctrl+s",
+        "command": "-calva.selectCurrentForm",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+alt+c enter",
+        "command": "-calva.loadFile",
+        "when": "calva:keybindingsEnabled && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+alt+cmd+up",
+        "command": "-quickInput.previousSeparator",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "calva.evaluateCurrentTopLevelForm",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-calva.evaluateSelectionToSelectionEnd",
+        "when": "calva:keybindingsEnabled && editorHasSelection && editorTextFocus && editorLangId == 'clojure'"
+    },
+    {
         "key": "ctrl+alt+enter",
         "command": "-calva.evaluateToCursor",
         "when": "calva:keybindingsEnabled && editorTextFocus && !editorHasSelection && editorLangId == 'clojure'"
     },
     {
-        "key": "shift+cmd+o",
-        "command": "-workbench.action.quickOpen"
+        "key": "ctrl+alt+left",
+        "command": "-paredit.barfSexpForward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
     },
     {
-        "key": "shift+cmd+a",
-        "command": "-workbench.action.showCommands"
-    },
-    {
-        "key": "cmd+w o",
-        "command": "workbench.action.closeOtherEditors"
-    },
-    {
-        "key": "alt+cmd+t",
-        "command": "-workbench.action.closeOtherEditors"
-    },
-    {
-        "key": "cmd+0",
-        "command": "calva.showOutputTerminal",
-        "when": "calva:keybindingsEnabled"
+        "key": "ctrl+alt+o r",
+        "command": "-calva.showReplWindow",
+        "when": "calva:connected && calva:keybindingsEnabled && !calva:outputWindowActive"
     },
     {
         "key": "ctrl+alt+o t",
@@ -363,25 +334,145 @@
         "when": "calva:keybindingsEnabled"
     },
     {
-        "key": "cmd+0",
-        "command": "terminal.focus"
+        "key": "ctrl+alt+o v",
+        "command": "-calva.showReplOutputView",
+        "when": "calva:keybindingsEnabled"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-paredit.slurpSexpForward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+alt+w space",
+        "command": "-paredit.rangeForDefun",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "projectManager.listProjects"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-notebook.centerActiveCell",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+shift+alt+,",
+        "command": "paredit.slurpSexpBackward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+alt+.",
+        "command": "paredit.barfSexpBackward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+alt+/",
+        "command": "paredit.sexpRangeContraction",
+        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+alt+left",
+        "command": "-paredit.slurpSexpBackward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+alt+right",
+        "command": "-paredit.barfSexpBackward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "-paredit.sexpRangeContraction",
+        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-paredit.sexpRangeExpansion",
+        "when": "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-composer.previousChatTab",
+        "when": "composerFocused && !editorTextFocus"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[",
+        "command": "composer.previousChatTab"
+    },
+    {
+        "key": "ctrl+alt+o r",
+        "command": "-calva.showFileForOutputWindowNS",
+        "when": "calva:connected && calva:keybindingsEnabled && calva:outputWindowActive"
     },
     {
         "key": "cmd+0",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
+        "command": "calva.showOutputWindow"
     },
     {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
+        "key": "cmd+w i",
+        "command": "workbench.action.navigateUp"
     },
     {
-        "key": "ctrl+alt+\\",
-        "command": "calva.clojureLsp.manage"
+        "key": "cmd+w k",
+        "command": "workbench.action.navigateDown"
     },
     {
-        "key": "cmd+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
+        "key": "cmd+w j",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "cmd+w l",
+        "command": "workbench.action.navigateRight"
     }
 ]
