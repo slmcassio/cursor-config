@@ -118,17 +118,6 @@ function addSearchFunctionality() {
     });
 }
 
-// Function to add print functionality
-function addPrintFunctionality() {
-    const printButton = document.getElementById('print-button');
-    if (!printButton) return;
-    printButton.addEventListener('click', function() {
-        setTimeout(() => {
-            window.print();
-        }, 150);
-    });
-}
-
 // Function to add keyboard shortcuts
 function addKeyboardShortcuts() {
     document.addEventListener('keydown', function(e) {
@@ -139,10 +128,6 @@ function addKeyboardShortcuts() {
                 searchInput.focus();
                 searchInput.select();
             }
-        }
-        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-            e.preventDefault();
-            window.print();
         }
         if (e.key === 'Escape') {
             const searchInput = document.getElementById('search-input');
@@ -182,7 +167,6 @@ function addEnhancements() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeShortcutsTable();
     addSearchFunctionality();
-    addPrintFunctionality();
     addKeyboardShortcuts();
     addEnhancements();
     const searchInput = document.getElementById('search-input');

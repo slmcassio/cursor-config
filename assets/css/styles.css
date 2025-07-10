@@ -87,25 +87,6 @@ body {
     overflow: hidden;
 }
 
-/* Print button */
-#print-button {
-    border: none;
-    border-radius: 9999px;
-    background: linear-gradient(90deg, #ff277e 0%, #a633ff 100%);
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 0.75rem 2.25rem;
-    box-shadow: 0 2px 12px 0 rgba(166,51,255,0.18);
-    transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
-    outline: none;
-}
-#print-button:hover, #print-button:focus {
-    background: linear-gradient(90deg, #a633ff 0%, #ff277e 100%);
-    box-shadow: 0 4px 24px 0 rgba(166,51,255,0.28);
-    transform: translateY(-2px) scale(1.04);
-}
-
 /* Search input */
 #search-input {
     background: rgba(35, 41, 70, 0.7);
@@ -275,13 +256,6 @@ body {
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 8px 32px 0 rgba(162, 89, 255, 0.10), 0 1.5px 8px 0 rgba(255, 45, 122, 0.08);
     border: 1.5px solid rgba(162, 89, 255, 0.10);
-  }
-  #print-button {
-    background: linear-gradient(90deg, #a259ff 0%, #ff2d7a 100%);
-    color: #fff;
-  }
-  #print-button:hover, #print-button:focus {
-    background: linear-gradient(90deg, #ff2d7a 0%, #a259ff 100%);
   }
   #search-input {
     background: rgba(224, 231, 255, 0.7);
