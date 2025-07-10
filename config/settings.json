@@ -20,13 +20,12 @@
   // ========================================
   // Workbench/UI Configuration
   // ========================================
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
-  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.preferredHighContrastColorTheme": "Cursor Dark High Contrast",
   "workbench.preferredLightColorTheme": "Catppuccin Frappé",
   "window.autoDetectColorScheme": true,
 
@@ -111,5 +110,6 @@
       "key": "t-",
       "snippet": "(clojure.test/run-test-var #'$top-level-defined-symbol)"
     }
-  ]
+  ],
+  "window.systemColorTheme": "auto"
 }
