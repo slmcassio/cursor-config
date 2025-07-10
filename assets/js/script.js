@@ -164,6 +164,44 @@ function addEnhancements() {
     });
 }
 
+function renderCalvaReplSnippets(snippets) {
+    if (!snippets || !snippets.length) return '';
+
+    let html = `
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold mb-4">REPL Command Snippets</h2>
+            <p class="mb-4 text-slate-400 text-sm">
+                These custom REPL command snippets are available in the Calva REPL command menu. Use the key shown to trigger each snippet.
+            </p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-transparent border border-slate-700 rounded-lg">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2 text-left">Name</th>
+                            <th class="px-4 py-2 text-left">Key</th>
+                            <th class="px-4 py-2 text-left">Snippet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    `;
+    for (const snippet of snippets) {
+        html += `
+            <tr>
+                <td class="px-4 py-2 font-semibold">${snippet.name}</td>
+                <td class="px-4 py-2"><kbd>${snippet.key}</kbd></td>
+                <td class="px-4 py-2"><code>${snippet.snippet}</code></td>
+            </tr>
+        `;
+    }
+    html += `
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    `;
+    return html;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     initializeShortcutsTable();
     addSearchFunctionality();
@@ -179,4 +217,10 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentElement.style.transform = 'scale(1)';
         });
     }
+    // Render divider and REPL Command Snippets section at the end of the main content
+    const mainContent = document.querySelector('.glass-card') || document.body;
+    mainContent.insertAdjacentHTML('beforeend', '<div style="margin-top: 4rem; margin-bottom: 2rem;"><hr class="border-slate-700" /></div>');
+    mainContent.insertAdjacentHTML('beforeend', renderCalvaReplSnippets(shortcutsData.calvaReplSnippets));
+    // Add Starship credit after the snippets
+    mainContent.insertAdjacentHTML('beforeend', '<div class="text-center mt-6 text-xs text-slate-500">Inspired by the beautiful design of <a href="https://starship.rs/" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200" target="_blank" rel="noopener">Starship</a></div>');
 }); 

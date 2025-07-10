@@ -18,6 +18,10 @@
                 <h1 class="main-title shortcut-title mb-2">Keyboard Shortcuts</h1>
                 <div class="starship-subtitle">A SHORT &amp; EFFECTIVE LIST</div>
                 <p class="subtitle max-w-2xl mx-auto">A clean, organized reference for your Cursor and Calva shortcuts. Search, filter, and boost your productivity.</p>
+                <!-- How to use/config info note -->
+                <div class="mt-4 text-center text-slate-400 text-sm">
+                    <p>For configuration files and keybinding details, see the <a href="https://github.com/slmcassio/cursor-config" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200" target="_blank" rel="noopener">GitHub repository</a>.</p>
+                </div>
             </header>
             <!-- Search and Controls -->
             <div class="mb-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -36,7 +40,7 @@
                 </div>
             </div>
             <!-- Main Content: Sheet -->
-            <div class="overflow-x-auto">
+            <div id="shortcuts" class="overflow-x-auto">
                 <table id="shortcuts-table">
                     <thead>
                         <tr>
@@ -50,19 +54,14 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Calva REPL Snippets Section Anchor -->
+            <div id="calva-repl-snippets"></div>
             <!-- Legend -->
             <div class="legend text-center mt-10 text-slate-400 text-sm">
                 <p><span class="font-bold">Legend:</span> <span class="key-separator">+</span> means <em>press together</em>; <span class="key-separator">›</span> means <em>release the previous keys, then press the next key</em>.</p>
             </div>
-            <!-- Download Link -->
-            <div class="text-center mt-8">
-                <a href="config/keybindings.json" download class="download-link block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Download My Cursor Keybindings (JSON)</a>
-                <p class="text-xs text-slate-500 mt-2">Note: These keybindings are configured on top of the <a href="https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">IntelliJ IDEA Keybindings</a> plugin. In the future, there will be a version that does not depend on this plugin.</p>
-            </div>
             <!-- Footer -->
             <footer class="text-center mt-12 text-slate-500 text-sm">
-                <p class="mb-2">A clean, organized shortcut reference sheet</p>
-                <p class="text-xs">Inspired by the beautiful design of <a href="https://starship.rs/" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">Starship</a></p>
             </footer>
         </div>
     </div>
