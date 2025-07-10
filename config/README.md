@@ -1,5 +1,6 @@
 # Configuration Setup for Cursor/VS Code
 
+- [Browse this config folder on GitHub](https://github.com/slmcassio/cursor-config/tree/main/config)
 This directory contains configuration files and recommended extensions for Cursor (VS Code).
 
 ## Installing Extensions via Command Line

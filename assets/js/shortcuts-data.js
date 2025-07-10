@@ -88,6 +88,33 @@ const shortcutsData = {
                 { keys: ["⌃", "⌥", "\\"], description: "Manage Clojure LSP Server" }
             ]
         }
+    ],
+    calvaReplSnippets: [
+        {
+            name: "Refresh REPL",
+            key: "x",
+            snippet: "(clojure.tools.namespace.repl/refresh)"
+        },
+        {
+            name: "Refresh-all REPL",
+            key: "x+",
+            snippet: "(clojure.tools.namespace.repl/refresh-all)"
+        },
+        {
+            name: "Unalias all NS",
+            key: "ns-",
+            snippet: "(map (partial ns-unalias *ns*) (keys (ns-aliases *ns*)))"
+        },
+        {
+            name: "Run tests on current namespace",
+            key: "t",
+            snippet: "(clojure.test/run-tests '$ns)"
+        },
+        {
+            name: "Run single test",
+            key: "t-",
+            snippet: "(clojure.test/run-test-var #'$top-level-defined-symbol)"
+        }
     ]
 };
 
