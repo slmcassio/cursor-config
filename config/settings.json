@@ -7,6 +7,9 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.minimap.sectionHeaderLetterSpacing": 2,
+  "debug.console.fontSize": 13,
+  "markdown.preview.fontSize": 13,
+  "notebook.markup.fontFamily": "'JetBrains Mono'",
 
   // ========================================
   // Files Configuration
@@ -20,15 +23,18 @@
   // ========================================
   // Workbench/UI Configuration
   // ========================================
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "window.autoDetectColorScheme": true,
+  "window.systemColorTheme": "auto",
+  "workbench.colorTheme": "Catppuccin Noctis Macchiato",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "catppuccin-mocha",
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredHighContrastColorTheme": "Cursor Dark High Contrast",
-  "workbench.preferredLightColorTheme": "Catppuccin Frappé",
-  "window.autoDetectColorScheme": true,
-
+  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.preferredDarkColorTheme": "Catppuccin Noctis Macchiato",
+  "workbench.preferredLightColorTheme": "Catppuccin Noctis Frappé",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Noctis Mocha",
+  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Noctis Latte",
+  "catppuccin-noctis-icons.hidesExplorerArrows": true,
+  
   // ========================================
   // Terminal Configuration
   // ========================================
@@ -37,6 +43,11 @@
   },
   "terminal.integrated.fontSize": 13,
 
+  // ========================================
+  // Git Configuration
+  // ========================================
+  "git.autofetch": true,
+  
   // ========================================
   // Search Configuration
   // ========================================
@@ -51,21 +62,6 @@
     "~/Developer",
     "~/dev"
   ],
-
-  // ========================================
-  // Debug Configuration
-  // ========================================
-  "debug.console.fontSize": 13,
-
-  // ========================================
-  // Markdown Configuration
-  // ========================================
-  "markdown.preview.fontSize": 13,
-
-  // ========================================
-  // Notebook Configuration
-  // ========================================
-  "notebook.markup.fontFamily": "'JetBrains Mono'",
 
   // ========================================
   // Calva/Clojure Configuration
@@ -110,6 +106,5 @@
       "key": "t-",
       "snippet": "(clojure.test/run-test-var #'$top-level-defined-symbol)"
     }
-  ],
-  "window.systemColorTheme": "auto"
+  ]
 }

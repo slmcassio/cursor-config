@@ -505,5 +505,50 @@
         "key": "ctrl+alt+o r",
         "command": "-calva.showFileForOutputWindowNS",
         "when": "calva:connected && calva:keybindingsEnabled && calva:outputWindowActive"
+    },
+    {
+        "key": "cmd+2",
+        "command": "search.action.openNewEditor"
+    },
+    {
+        "key": "cmd+3",
+        "command": "search.action.openNewEditorToSide"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-workbench.action.replaceInFiles"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.view.search",
+        "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-filesExplorer.findInFolder",
+        "when": "explorerResourceIsFolder && filesExplorerFocus"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "search.action.openNewEditor"
+    },
+    {
+        "key": "cmd+r e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
     }
 ]
